@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Каталог пива — Malt & Ember</title>
+  <meta name="description" content="Шість чесних рецептів від чотирьох незалежних пивоварень.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Lora:wght@400;500&amp;display=swap">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-flame" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol><symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4.5"/><path d="M20 21a8 8 0 0 0-16 0"/></symbol><symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol><symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol><symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></symbol><symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol><symbol id="i-arrow-ur" viewBox="0 0 24 24"><path d="M7 7h10v10M7 17 17 7"/></symbol><symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7"/></symbol><symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol><symbol id="i-truck" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol><symbol id="i-package" viewBox="0 0 24 24"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><path d="M3.3 7 12 12l8.7-5"/><path d="m7.5 4.3 9 5.1"/></symbol><symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></symbol><symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol><symbol id="i-wheat" viewBox="0 0 24 24"><path d="M2 22 16 8"/><path d="M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M7.47 8.53 9 7l1.53 1.53a3.5 3.5 0 0 1 0 4.94L9 15l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M11.47 4.53 13 3l1.53 1.53a3.5 3.5 0 0 1 0 4.94L13 11l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M20 2h2v2a4 4 0 0 1-4 4h-2V6a4 4 0 0 1 4-4Z"/></symbol><symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol><symbol id="i-expand" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></symbol></svg>
+<a class="skip-link" href="#main">Перейти до змісту</a>
+<header class="site-header">
+  <p class="announcement">Доставка від 1&nbsp;500&nbsp;₴ — за наш рахунок. 18+</p>
+  <div class="nav-bar">
+    <nav class="nav" aria-label="Основна навігація">
+      <button class="nav__menu-btn" type="button" aria-label="Відкрити меню" aria-expanded="false"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg></button>
+      <a class="brand" href="index.html" aria-label="Malt &amp; Ember — на головну"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-flame"/></svg><span>malt &amp; ember</span></a>
+      <div class="nav__links"><a class="nav__link" href="catalog.html" aria-current="page">Пиво</a><a class="nav__link" href="catalog.html#sets">Набори пива</a><a class="nav__link" href="index.html#brewers">Наші пивовари</a><a class="nav__link" href="index.html#journal">Журнал</a></div>
+      <div class="nav__actions">
+        <a class="icon-link icon-link--hide-sm" href="catalog.html#search" aria-label="Пошук"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-search"/></svg></a>
+        <a class="icon-link icon-link--hide-sm" href="#" aria-label="Особистий кабінет"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-user"/></svg></a>
+        <a class="icon-link" href="cart.html" aria-label="Кошик"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-bag"/></svg><span class="cart-count">3</span></a>
+      </div>
+    </nav>
+  </div>
+  <div class="quick-links"><a href="catalog.html">Каталог</a><a href="catalog.html#sets">Набори пива</a><a href="index.html#brewers">Пивовари</a><a href="index.html#journal">Журнал</a></div>
+</header>
+<main id="main">
+<div class="container page-intro">
+  <nav class="breadcrumb" aria-label="Хлібні крихти"><ol><li><a href="index.html">Головна</a></li><li aria-current="page">Каталог</li></ol></nav>
+  <h1 class="h1">Пиво з характером</h1>
+  <p>Шість чесних рецептів. Чотири незалежні пивоварні. Ваш наступний улюблений смак.</p>
+</div>
+
+<div class="container catalog" data-catalog id="search">
+  <div class="catalog__search">
+    <div class="field search">
+      <label class="field__label" for="search-input">Пошук</label>
+      <input class="input" id="search-input" type="search" placeholder="Назва або смакові ноти" autocomplete="off">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-search"/></svg>
+    </div>
+    <div class="field">
+      <label class="field__label" for="sort">Сортувати</label>
+      <select class="select" id="sort">
+        <option value="popular">За популярністю</option>
+        <option value="price-asc">Ціна: від низької</option>
+        <option value="price-desc">Ціна: від високої</option>
+        <option value="abv-desc">Міцність: від вищої</option>
+      </select>
+    </div>
+  </div>
+
+  <aside class="catalog__filters filters" aria-label="Фільтри каталогу">
+    <div class="filters__head">
+      <h2 class="filters__title">Фільтри</h2>
+      <a class="filters__reset" href="#" data-reset>Скинути</a>
+    </div>
+    <div class="filters__main">
+      <details class="filter-group" open>
+        <summary>Стиль пива</summary>
+        <ul class="filter-group__list"><li><label class="check"><input type="checkbox" data-filter="style" value="lager"><span class="check__label">Lager</span><span class="check__count">1</span></label></li><li><label class="check"><input type="checkbox" data-filter="style" value="ale"><span class="check__label">Ale</span><span class="check__count">2</span></label></li><li><label class="check"><input type="checkbox" data-filter="style" value="ipa"><span class="check__label">IPA</span><span class="check__count">1</span></label></li><li><label class="check"><input type="checkbox" data-filter="style" value="stout"><span class="check__label">Stout</span><span class="check__count">1</span></label></li><li><label class="check"><input type="checkbox" data-filter="style" value="porter"><span class="check__label">Porter</span><span class="check__count">1</span></label></li></ul>
+      </details>
+      <details class="filter-group" open>
+        <summary>Країна</summary>
+        <ul class="filter-group__list"><li><label class="check"><input type="checkbox" data-filter="country" value="ua"><span class="check__label">Україна</span><span class="check__count">5</span></label></li><li><label class="check"><input type="checkbox" data-filter="country" value="dk"><span class="check__label">Данія</span><span class="check__count">1</span></label></li></ul>
+      </details>
+    </div>
+    <div class="filters__more filters__main">
+      <details class="filter-group" open>
+        <summary><span>Пивоварня<span class="filter-state"> · усі</span></span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-chevron"/></svg></summary>
+        <ul class="filter-group__list"><li><label class="check"><input type="checkbox" data-filter="brewery" value="malt-ember"><span class="check__label">Malt &amp; Ember</span><span class="check__count">2</span></label></li><li><label class="check"><input type="checkbox" data-filter="brewery" value="dykyi-khmil"><span class="check__label">Дикий Хміль</span><span class="check__count">2</span></label></li><li><label class="check"><input type="checkbox" data-filter="brewery" value="chorna-brama"><span class="check__label">Чорна Брама</span><span class="check__count">1</span></label></li><li><label class="check"><input type="checkbox" data-filter="brewery" value="nord-bryg"><span class="check__label">Nord Bryg</span><span class="check__count">1</span></label></li></ul>
+      </details>
+      <details class="filter-group range" open>
+        <summary><span>Ціна, ₴<span class="filter-state"> · 100–200 ₴</span></span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-chevron"/></svg></summary>
+        <div class="range__values">
+          <input class="input" id="price-min" type="number" value="100" min="0" aria-label="Ціна від">
+          <input class="input" id="price-max" type="number" value="200" min="0" aria-label="Ціна до">
+        </div>
+        <div class="range__track" aria-hidden="true"><span></span><span></span></div>
+      </details>
+      <details class="filter-group range" open>
+        <summary><span>Міцність, % ABV<span class="filter-state"> · 4–9%</span></span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-chevron"/></svg></summary>
+        <div class="range__values">
+          <input class="input" id="abv-min" type="number" value="4" min="0" max="20" step="0.1" aria-label="Міцність від">
+          <input class="input" id="abv-max" type="number" value="9" min="0" max="20" step="0.1" aria-label="Міцність до">
+        </div>
+        <div class="range__track" aria-hidden="true"><span></span><span></span></div>
+      </details>
+    </div>
+    <div class="curator-note">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-wheat"/></svg>
+      <strong>Не знаєте, що обрати?</strong>
+      <p>Почніть із наших фаворитів — у кожного свій характер.</p>
+    </div>
+  </aside>
+
+  <section class="catalog__results" aria-label="Результати" id="sets">
+    <div class="results-toolbar">
+      <p data-result-count aria-live="polite">Показано 6 із 6 сортів</p>
+      <span class="chip chip--selected"><svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Усе пиво</span>
+    </div>
+    <div class="product-grid product-grid--3" data-grid data-api-grid>
+<article class="card" data-card data-id="autumn-amber" data-name="Бурштиновий сезон" data-notes="Карамель · Апельсин · Хлібна скоринка" data-style="ale" data-country="ua" data-brewery="malt-ember" data-price="145" data-abv="5.6" data-pop="1">
+  <div class="card__media">
+    <img src="img/amber.jpg" alt="Пляшка пива «Бурштиновий сезон»" width="600" height="560" loading="lazy">
+    <span class="badge">Сезонне</span>
+    <button class="icon-btn card__wish" type="button" aria-label="Додати «Бурштиновий сезон» в обране" aria-pressed="false"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-heart"/></svg></button>
+  </div>
+  <div class="card__body">
+    <p class="card__meta">Amber Ale · 5,6%</p>
+    <h3 class="card__title"><a href="product.html">Бурштиновий сезон</a></h3>
+    <p class="card__notes">Карамель · Апельсин · Хлібна скоринка</p>
+    <div class="card__buy"><span class="price">145&nbsp;₴</span><span class="pack">0,5&nbsp;л</span></div>
+    <button class="btn btn--primary btn--block" type="button" data-add><span class="btn__label">Додати в кошик</span><svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></button>
+  </div>
+</article>
+<article class="card" data-card data-id="quiet-forest" data-name="Тихий ліс" data-notes="Солод · Трави · Чистий фініш" data-style="lager" data-country="ua" data-brewery="malt-ember" data-price="115" data-abv="4.8" data-pop="2">
+  <div class="card__media">
+    <img src="img/forest.jpg" alt="Пляшка пива «Тихий ліс»" width="600" height="560" loading="lazy">
+    <span class="badge">Вибір куратора</span>
+    <button class="icon-btn card__wish" type="button" aria-label="Додати «Тихий ліс» в обране" aria-pressed="false"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-heart"/></svg></button>
+  </div>
+  <div class="card__body">
+    <p class="card__meta">Lager · 4,8%</p>
+    <h3 class="card__title"><a href="product.html">Тихий ліс</a></h3>
+    <p class="card__notes">Солод · Трави · Чистий фініш</p>
+    <div class="card__buy"><span class="price">115&nbsp;₴</span><span class="pack">0,5&nbsp;л</span></div>
+    <button class="btn btn--primary btn--block" type="button" data-add><span class="btn__label">Додати в кошик</span><svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></button>
+  </div>
+</article>
+<article class="card" data-card data-name="Сонячний хміль" data-notes="Манго · Цитрус · Хмелева гіркота" data-style="ipa" data-country="ua" data-brewery="dykyi-khmil" data-price="155" data-abv="6.2" data-pop="3">
+  <div class="card__media">
+    <img src="img/hop.jpg" alt="Пляшка пива «Сонячний хміль»" width="600" height="560" loading="lazy">
+    <span class="badge">Вибір куратора</span>
+    <button class="icon-btn card__wish" type="button" aria-label="Додати «Сонячний хміль» в обране" aria-pressed="false"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-heart"/></svg></button>
+  </div>
+  <div class="card__body">
+    <p class="card__meta">IPA · 6,2%</p>
+    <h3 class="card__title"><a href="product.html">Сонячний хміль</a></h3>
+    <p class="card__notes">Манго · Цитрус · Хмелева гіркота</p>
+    <div class="card__buy"><span class="price">155&nbsp;₴</span><span class="pack">0,5&nbsp;л</span></div>
+    <button class="btn btn--primary btn--block" type="button" data-add><span class="btn__label">Додати в кошик</span><svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></button>
+  </div>
+</article>
+<article class="card" data-card data-name="Опівніч" data-notes="Кава · Какао · Темний шоколад" data-style="stout" data-country="ua" data-brewery="chorna-brama" data-price="165" data-abv="7.0" data-pop="4">
+  <div class="card__media">
+    <img src="img/midnight.jpg" alt="Пляшка пива «Опівніч»" width="600" height="560" loading="lazy">
+    <span class="badge">Вибір куратора</span>
+    <button class="icon-btn card__wish" type="button" aria-label="Додати «Опівніч» в обране" aria-pressed="false"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-heart"/></svg></button>
+  </div>
+  <div class="card__body">
+    <p class="card__meta">Stout · 7,0%</p>
+    <h3 class="card__title"><a href="product.html">Опівніч</a></h3>
+    <p class="card__notes">Кава · Какао · Темний шоколад</p>
+    <div class="card__buy"><span class="price">165&nbsp;₴</span><span class="pack">0,5&nbsp;л</span></div>
+    <button class="btn btn--primary btn--block" type="button" data-add><span class="btn__label">Додати в кошик</span><svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></button>
+  </div>
+</article>
+<article class="card" data-card data-name="Дикий сад" data-notes="Персик · Квіти · Легка гіркота" data-style="ale" data-country="ua" data-brewery="dykyi-khmil" data-price="135" data-abv="5.2" data-pop="5">
+  <div class="card__media">
+    <img src="img/garden.jpg" alt="Пляшка пива «Дикий сад»" width="600" height="560" loading="lazy">
+    <span class="badge">Вибір куратора</span>
+    <button class="icon-btn card__wish" type="button" aria-label="Додати «Дикий сад» в обране" aria-pressed="false"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-heart"/></svg></button>
+  </div>
+  <div class="card__body">
+    <p class="card__meta">Pale Ale · 5,2%</p>
+    <h3 class="card__title"><a href="product.html">Дикий сад</a></h3>
+    <p class="card__notes">Персик · Квіти · Легка гіркота</p>
+    <div class="card__buy"><span class="price">135&nbsp;₴</span><span class="pack">0,5&nbsp;л</span></div>
+    <button class="btn btn--primary btn--block" type="button" data-add><span class="btn__label">Додати в кошик</span><svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></button>
+  </div>
+</article>
+<article class="card card--sold" data-card data-name="Північ" data-notes="Чорнослив · Шоколад · Прянощі" data-style="porter" data-country="dk" data-brewery="nord-bryg" data-price="185" data-abv="8.0" data-pop="6">
+  <div class="card__media">
+    <img src="img/north.jpg" alt="Пляшка пива «Північ»" width="600" height="560" loading="lazy">
+    <span class="badge badge--dark">Розпродано</span>
+    <button class="icon-btn card__wish" type="button" aria-label="Додати «Північ» в обране" aria-pressed="false"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-heart"/></svg></button>
+  </div>
+  <div class="card__body">
+    <p class="card__meta">Baltic Porter · 8,0%</p>
+    <h3 class="card__title"><a href="product.html">Північ</a></h3>
+    <p class="card__notes">Чорнослив · Шоколад · Прянощі</p>
+    <div class="card__buy"><span class="price">185&nbsp;₴</span><span class="pack">0,5&nbsp;л</span></div>
+    <button class="btn btn--primary btn--block" type="button" disabled><span class="btn__label">Немає в наявності</span></button>
+  </div>
+</article>
+    </div>
+    <p class="empty-state" data-empty hidden>За цими фільтрами нічого не знайдено. Спробуйте скинути фільтри.</p>
+    <p class="catalog-end">Ви переглянули всі сорти. Свіжі партії — щомісяця.</p>
+  </section>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <p class="footer__wordmark">malt &amp; ember</p>
+        <p>Незалежне пиво. Вдумливий вибір. Знайомимо з крафтом, який варто смакувати.</p>
+        <p class="footer__social"><a href="#">Instagram ↗</a><a href="#">Telegram ↗</a></p>
+      </div>
+      <div class="footer__nav">
+        <nav aria-labelledby="f-shop">
+          <h2 id="f-shop">Магазин</h2>
+          <ul>
+            <li><a href="catalog.html">Каталог пива</a></li>
+            <li><a href="catalog.html#sets">Набори пива</a></li>
+            <li><a href="index.html#brewers">Наші пивовари</a></li>
+            <li><a href="index.html#journal">Журнал</a></li>
+          </ul>
+        </nav>
+        <nav aria-labelledby="f-help">
+          <h2 id="f-help">Допомога</h2>
+          <ul>
+            <li><a href="cart.html#delivery">Доставка й оплата</a></li>
+            <li><a href="#">Повернення</a></li>
+            <li><a href="#">Контакти</a></li>
+            <li><a href="tel:+380443331818">+380 44 333 18 18</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <hr class="footer__rule">
+    <div class="footer__legal">
+      <p>© 2026 Malt &amp; Ember. Усі права захищені.</p>
+      <p><a href="#">Політика конфіденційності</a></p>
+      <p>18+ • Споживайте відповідально.</p>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js" defer></script>
+</body>
+</html>

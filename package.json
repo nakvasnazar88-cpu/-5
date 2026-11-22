@@ -1,0 +1,16 @@
+{
+  "name": "malt-ember",
+  "version": "1.0.0",
+  "description": "Malt & Ember — навчальний інтернет-магазин крафтового пива (лабораторна робота № 5): клієнт + Node.js REST API + SQLite",
+  "private": true,
+  "type": "commonjs",
+  "main": "server.js",
+  "engines": { "node": ">=22.5.0" },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server.js",
+    "dev": "node --disable-warning=ExperimentalWarning --watch server.js",
+    "seed": "node --disable-warning=ExperimentalWarning src/seed-cli.js",
+    "test": "node --disable-warning=ExperimentalWarning --test test/*.test.js"
+  },
+  "license": "UNLICENSED"
+}

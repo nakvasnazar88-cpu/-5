@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Адмінпанель — Malt & Ember</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin">
+<a class="skip-link" href="#main">Перейти до змісту</a>
+<header class="admin__bar"><div class="container admin__bar-in">
+  <a class="brand" href="index.html"><span>malt &amp; ember</span></a>
+  <p>Адмінпанель (CRUD товарів і замовлень)</p>
+</div></header>
+<main id="main" class="container admin__main">
+  <section aria-labelledby="auth-title" class="admin__card">
+    <h1 id="auth-title" class="admin__h">Доступ</h1>
+    <form id="auth-form" class="admin__row">
+      <label class="field__label" for="token">Токен адміністратора (ADMIN_TOKEN)</label>
+      <input class="input" id="token" type="password" autocomplete="off" required minlength="16">
+      <button class="btn btn--primary" type="submit"><span class="btn__label">Увійти</span></button>
+    </form>
+    <p class="form-message" id="auth-msg" role="status" aria-live="polite"></p>
+  </section>
+
+  <div id="panel" hidden>
+    <section aria-labelledby="prod-title" class="admin__card">
+      <h2 id="prod-title" class="admin__h">Товари</h2>
+      <div class="admin__table-wrap">
+        <table class="admin__table">
+          <caption class="sr-only">Список товарів</caption>
+          <thead><tr><th scope="col">id</th><th scope="col">Назва</th><th scope="col">Стиль</th><th scope="col">Ціна, ₴</th><th scope="col">ABV</th><th scope="col">В наявності</th><th scope="col">Дії</th></tr></thead>
+          <tbody id="products-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="form-title" class="admin__card">
+      <h2 id="form-title" class="admin__h">Додати / редагувати товар</h2>
+      <form id="product-form" class="admin__grid" novalidate>
+        <div class="field"><label class="field__label" for="f-id">id (slug)</label><input class="input" id="f-id" name="id" required pattern="[a-z0-9-]+"></div>
+        <div class="field"><label class="field__label" for="f-name">Назва</label><input class="input" id="f-name" name="name" required></div>
+        <div class="field"><label class="field__label" for="f-style">Стиль</label>
+          <select class="input" id="f-style" name="style"><option>lager</option><option>ale</option><option>ipa</option><option>stout</option><option>porter</option></select></div>
+        <div class="field"><label class="field__label" for="f-label">Назва стилю</label><input class="input" id="f-label" name="style_label" required></div>
+        <div class="field"><label class="field__label" for="f-country">Країна</label>
+          <select class="input" id="f-country" name="country"><option>ua</option><option>dk</option><option>cz</option><option>de</option><option>pl</option></select></div>
+        <div class="field"><label class="field__label" for="f-brewery">Пивоварня (slug)</label><input class="input" id="f-brewery" name="brewery" required></div>
+        <div class="field"><label class="field__label" for="f-price">Ціна, ₴</label><input class="input" id="f-price" name="price" type="number" min="1" step="1" required></div>
+        <div class="field"><label class="field__label" for="f-abv">Міцність, %</label><input class="input" id="f-abv" name="abv" type="number" min="0" max="20" step="0.1" required></div>
+        <div class="field"><label class="field__label" for="f-notes">Нотки смаку</label><input class="input" id="f-notes" name="notes"></div>
+        <div class="field"><label class="field__label" for="f-image">Зображення (img/…jpg)</label><input class="input" id="f-image" name="image" value="img/amber.jpg"></div>
+        <label class="age-confirm"><input type="checkbox" name="in_stock" checked><span>В наявності</span></label>
+        <div class="admin__actions">
+          <button class="btn btn--primary" type="submit"><span class="btn__label" id="submit-label">Створити</span></button>
+          <button class="btn" type="button" id="reset-form"><span class="btn__label">Очистити форму</span></button>
+        </div>
+      </form>
+      <p class="form-message" id="form-msg" role="status" aria-live="polite"></p>
+    </section>
+
+    <section aria-labelledby="ord-title" class="admin__card">
+      <h2 id="ord-title" class="admin__h">Замовлення</h2>
+      <div class="admin__table-wrap">
+        <table class="admin__table">
+          <caption class="sr-only">Список замовлень</caption>
+          <thead><tr><th scope="col">№</th><th scope="col">Клієнт</th><th scope="col">Склад</th><th scope="col">Сума, ₴</th><th scope="col">Статус</th><th scope="col">Дії</th></tr></thead>
+          <tbody id="orders-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</main>
+<script src="js/admin.js" defer></script>
+</body>
+</html>

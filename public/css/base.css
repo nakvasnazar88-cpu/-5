@@ -1,0 +1,160 @@
+/* ==========================================================================
+   base.css — дизайн-токени (з UI kit у Figma), скидання стилів, типографіка,
+   сітка-контейнер та службові класи.
+   ========================================================================== */
+
+:root {
+  /* Палітра «Malt & Ember» */
+  --paper: #f5f1e8;        /* Папір — фон сторінок */
+  --forest: #183c30;       /* Ліс — основний колір, заголовки, кнопки */
+  --forest-dark: #102c23;  /* Ліс темний — hover кнопки, футер */
+  --amber: #d9912b;        /* Бурштин — акцент */
+  --foam: #fffcf6;         /* Піна — картки, поля */
+
+  /* Допоміжні кольори, що використані в макетах */
+  --surface: #e8e3d7;      /* фон секцій «історія», «характеристики» */
+  --surface-2: #eae5d8;    /* фон панелей (фільтри, прогрес доставки) */
+  --line: #d9d6c9;         /* межі карток, розділювачі */
+  --line-warm: #d9cdbb;    /* межа навігації, поля введення */
+  --muted: #73766a;        /* вторинний текст */
+  --ink-soft: #20382e;     /* основний текст у блоках */
+  --on-dark: #e8e6d9;      /* текст на темно-зеленому */
+  --disabled: #d8d8cf;     /* неактивна кнопка */
+  --brown: #2c1c15;        /* темно-коричневий (бейдж «Розпродано») */
+  --error: #a74431;
+  --success: #466341;
+
+  /* Типографіка */
+  --font-display: "Lora", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+  /* Ритм 8 px, кути 4 px */
+  --sp-1: 8px;
+  --sp-2: 16px;
+  --sp-3: 24px;
+  --sp-4: 32px;
+  --sp-5: 40px;
+  --sp-6: 48px;
+  --sp-8: 64px;
+  --radius: 4px;
+
+  /* Поля сторінки: 64 px desktop → 40 px tablet → 20 px mobile */
+  --gutter: 64px;
+  --nav-gutter: 40px;
+  --container: 1312px;
+}
+
+@media (max-width: 1100px) {
+  :root { --gutter: 40px; }
+}
+@media (max-width: 600px) {
+  :root { --gutter: 20px; --nav-gutter: 0px; }
+}
+
+/* ---------- Скидання ---------- */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--forest);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+}
+
+img, svg { display: block; max-width: 100%; }
+img { height: auto; }
+
+h1, h2, h3, h4, p, ul, ol, figure, dl, dd { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+button, input, select { font: inherit; color: inherit; }
+button { cursor: pointer; background: none; border: 0; padding: 0; }
+
+/* Видимий фокус для клавіатури (доступність) */
+:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ---------- Типографіка (стилі з дизайн-системи) ---------- */
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  color: var(--forest);
+  line-height: 1.1;
+}
+
+.display   { font-size: clamp(46px, 5vw, 72px); line-height: 1.04; letter-spacing: -0.02em; }
+.h1        { font-size: clamp(40px, 4.2vw, 60px); line-height: 1.12; letter-spacing: -0.01em; }
+.h2        { font-size: clamp(32px, 3.2vw, 44px); line-height: 1.12; }
+.h3        { font-size: 26px; line-height: 1.12; }
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.lead  { font-size: 15px; color: var(--muted); }
+.small { font-size: 12px; }
+.muted { color: var(--muted); }
+
+/* ---------- Контейнер і службові класи ---------- */
+.container {
+  width: min(100% - 2 * var(--gutter), var(--container));
+  margin-inline: auto;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: 16px; top: -48px;
+  padding: 8px 16px;
+  background: var(--forest);
+  color: var(--foam);
+  z-index: 100;
+}
+.skip-link:focus { top: 8px; }
+
+.icon {
+  width: 20px; height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex: none;
+}
+.icon--sm { width: 16px; height: 16px; }
+
+.text-link {
+  font-size: 13px;
+  color: var(--forest);
+  white-space: nowrap;
+}
+.text-link:hover { color: var(--amber); }
+
+/* Елементи з атрибутом hidden не повинні перекриватися display-правилами компонентів. */
+[hidden] { display: none !important; }

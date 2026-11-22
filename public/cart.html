@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Кошик — Malt & Ember</title>
+  <meta name="description" content="Ваш кошик: перевірте вибір пива та оберіть спосіб доставки.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Lora:wght@400;500&amp;display=swap">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-flame" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol><symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4.5"/><path d="M20 21a8 8 0 0 0-16 0"/></symbol><symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol><symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol><symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></symbol><symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol><symbol id="i-arrow-ur" viewBox="0 0 24 24"><path d="M7 7h10v10M7 17 17 7"/></symbol><symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7"/></symbol><symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol><symbol id="i-truck" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol><symbol id="i-package" viewBox="0 0 24 24"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><path d="M3.3 7 12 12l8.7-5"/><path d="m7.5 4.3 9 5.1"/></symbol><symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></symbol><symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol><symbol id="i-wheat" viewBox="0 0 24 24"><path d="M2 22 16 8"/><path d="M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M7.47 8.53 9 7l1.53 1.53a3.5 3.5 0 0 1 0 4.94L9 15l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M11.47 4.53 13 3l1.53 1.53a3.5 3.5 0 0 1 0 4.94L13 11l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M20 2h2v2a4 4 0 0 1-4 4h-2V6a4 4 0 0 1 4-4Z"/></symbol><symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol><symbol id="i-expand" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></symbol></svg>
+<a class="skip-link" href="#main">Перейти до змісту</a>
+<header class="site-header">
+  <p class="announcement">Доставка від 1&nbsp;500&nbsp;₴ — за наш рахунок. 18+</p>
+  <div class="nav-bar">
+    <nav class="nav" aria-label="Основна навігація">
+      <button class="nav__menu-btn" type="button" aria-label="Відкрити меню" aria-expanded="false"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg></button>
+      <a class="brand" href="index.html" aria-label="Malt &amp; Ember — на головну"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-flame"/></svg><span>malt &amp; ember</span></a>
+      <div class="nav__links"><a class="nav__link" href="catalog.html">Пиво</a><a class="nav__link" href="catalog.html#sets">Набори пива</a><a class="nav__link" href="index.html#brewers">Наші пивовари</a><a class="nav__link" href="index.html#journal">Журнал</a></div>
+      <div class="nav__actions">
+        <a class="icon-link icon-link--hide-sm" href="catalog.html#search" aria-label="Пошук"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-search"/></svg></a>
+        <a class="icon-link icon-link--hide-sm" href="#" aria-label="Особистий кабінет"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-user"/></svg></a>
+        <a class="icon-link" href="cart.html" aria-label="Кошик"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-bag"/></svg><span class="cart-count">3</span></a>
+      </div>
+    </nav>
+  </div>
+  <div class="quick-links"><a href="catalog.html">Каталог</a><a href="catalog.html#sets">Набори пива</a><a href="index.html#brewers">Пивовари</a><a href="index.html#journal">Журнал</a></div>
+</header>
+<main id="main">
+<div class="container page-intro page-intro--cart">
+  <nav class="breadcrumb" aria-label="Хлібні крихти"><ol><li><a href="index.html">Головна</a></li><li aria-current="page">Кошик</li></ol></nav>
+  <h1 class="h1">Ваш кошик</h1>
+  <p data-lead>Три пляшки гарного настрою. Перевірте вибір — і ми подбаємо про решту.</p>
+</div>
+
+<div class="container">
+  <ol class="steps" aria-label="Кроки оформлення">
+    <li aria-current="step">01&nbsp;&nbsp;Кошик</li><li>02&nbsp;&nbsp;Контакти</li><li>03&nbsp;&nbsp;Оплата</li>
+  </ol>
+</div>
+
+<div class="container cart" data-cart>
+  <section aria-labelledby="cart-items-title">
+    <h2 class="visually-hidden" id="cart-items-title">Товари в кошику</h2>
+    <div class="cart__head"><span data-bottles>Товари · 3 пляшки</span><span>Сума</span></div>
+    <ul>
+<li class="cart-item" data-item data-price="145">
+  <img class="cart-item__thumb" src="img/cart-amber.jpg" alt="Пляшка пива «Бурштиновий сезон»" width="176" height="200">
+  <div class="cart-item__info">
+    <h3 class="cart-item__name">Бурштиновий сезон</h3>
+    <p class="cart-item__meta">Amber Ale · 5,6% · 0,5 л</p>
+    <button class="cart-item__remove" type="button" data-remove>Видалити · 145&nbsp;₴ / шт.</button>
+  </div>
+  <div class="qty qty--sm" role="group" aria-label="Кількість: Бурштиновий сезон">
+    <button type="button" data-minus aria-label="Зменшити кількість"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-minus"/></svg></button>
+    <output data-q>2</output>
+    <button type="button" data-plus aria-label="Збільшити кількість"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></button>
+  </div>
+  <p class="cart-item__total" data-line>290&nbsp;₴</p>
+</li>
+<li class="cart-item" data-item data-price="115">
+  <img class="cart-item__thumb" src="img/cart-forest.jpg" alt="Пляшка пива «Тихий ліс»" width="176" height="200">
+  <div class="cart-item__info">
+    <h3 class="cart-item__name">Тихий ліс</h3>
+    <p class="cart-item__meta">Lager · 4,8% · 0,5 л</p>
+    <button class="cart-item__remove" type="button" data-remove>Видалити · 115&nbsp;₴ / шт.</button>
+  </div>
+  <div class="qty qty--sm" role="group" aria-label="Кількість: Тихий ліс">
+    <button type="button" data-minus aria-label="Зменшити кількість"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-minus"/></svg></button>
+    <output data-q>1</output>
+    <button type="button" data-plus aria-label="Збільшити кількість"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></button>
+  </div>
+  <p class="cart-item__total" data-line>115&nbsp;₴</p>
+</li>
+    </ul>
+    <p class="cart__empty" data-empty hidden>Кошик порожній. <a href="catalog.html" class="text-link">Перейти до каталогу ↗</a></p>
+    <a class="text-link cart__continue" href="catalog.html">← Продовжити покупки</a>
+
+    <fieldset class="delivery" id="delivery">
+      <legend class="delivery__title">Як доставити?</legend>
+      <div class="delivery__list">
+        <label class="delivery-option">
+          <input type="radio" name="delivery" value="np" data-price="80" checked>
+          <span class="delivery-option__info"><span class="delivery-option__name">Нова пошта</span><span class="delivery-option__desc">У відділення або поштомат · 1–2 дні</span></span>
+          <span class="delivery-option__price">80&nbsp;₴</span>
+        </label>
+        <label class="delivery-option">
+          <input type="radio" name="delivery" value="pickup" data-price="0">
+          <span class="delivery-option__info"><span class="delivery-option__name">Самовивіз у Києві</span><span class="delivery-option__desc">вул. Нижній Вал, 12 · безкоштовно</span></span>
+          <span class="delivery-option__price">0&nbsp;₴</span>
+        </label>
+      </div>
+    </fieldset>
+  </section>
+
+  <aside class="cart__aside" aria-label="Підсумок замовлення">
+    <div class="progress">
+      <p class="progress__title" data-progress-text>Ще 1&nbsp;095&nbsp;₴ — і доставка безкоштовна</p>
+      <div class="progress__bar" role="presentation"><span data-progress-bar style="width:27%"></span></div>
+      <p class="progress__note">Безкоштовно для замовлень від 1&nbsp;500&nbsp;₴.</p>
+    </div>
+
+    <div class="totals">
+      <h2>Підсумок замовлення</h2>
+      <dl class="totals__lines">
+        <div class="totals__line"><dt>Вартість товарів</dt><dd data-goods>405&nbsp;₴</dd></div>
+        <div class="totals__line"><dt>Доставка</dt><dd data-delivery>80&nbsp;₴</dd></div>
+      </dl>
+      <hr class="rule">
+      <p class="totals__sum"><span>Всього</span><output data-total>485&nbsp;₴</output></p>
+      <form class="promo" data-promo>
+        <label class="visually-hidden" for="promo">Код знижки</label>
+        <input id="promo" type="text" placeholder="Код знижки" autocomplete="off">
+        <button type="submit">Застосувати</button>
+      </form>
+      <a class="btn btn--accent btn--block" href="#checkout-title" data-checkout aria-expanded="false">Оформити замовлення <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow-r"/></svg></a>
+      <p class="totals__trust"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-lock"/></svg>Безпечна оплата · Податки включено</p>
+      <p class="totals__age">Лише для осіб віком 18+. Споживайте відповідально.</p>
+    </div>
+
+    <p class="support"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg><span>Потрібна допомога? Напишіть нам у Telegram або телефонуйте +380&nbsp;44&nbsp;333&nbsp;18&nbsp;18.</span></p>
+  </aside>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <p class="footer__wordmark">malt &amp; ember</p>
+        <p>Незалежне пиво. Вдумливий вибір. Знайомимо з крафтом, який варто смакувати.</p>
+        <p class="footer__social"><a href="#">Instagram ↗</a><a href="#">Telegram ↗</a></p>
+      </div>
+      <div class="footer__nav">
+        <nav aria-labelledby="f-shop">
+          <h2 id="f-shop">Магазин</h2>
+          <ul>
+            <li><a href="catalog.html">Каталог пива</a></li>
+            <li><a href="catalog.html#sets">Набори пива</a></li>
+            <li><a href="index.html#brewers">Наші пивовари</a></li>
+            <li><a href="index.html#journal">Журнал</a></li>
+          </ul>
+        </nav>
+        <nav aria-labelledby="f-help">
+          <h2 id="f-help">Допомога</h2>
+          <ul>
+            <li><a href="cart.html#delivery">Доставка й оплата</a></li>
+            <li><a href="#">Повернення</a></li>
+            <li><a href="#">Контакти</a></li>
+            <li><a href="tel:+380443331818">+380 44 333 18 18</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <hr class="footer__rule">
+    <div class="footer__legal">
+      <p>© 2026 Malt &amp; Ember. Усі права захищені.</p>
+      <p><a href="#">Політика конфіденційності</a></p>
+      <p>18+ • Споживайте відповідально.</p>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js" defer></script>
+</body>
+</html>
